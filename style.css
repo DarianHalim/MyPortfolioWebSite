@@ -21,14 +21,15 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: right;
+    flex-wrap: wrap;
     height: 20px;
     align-items: center;
     position: relative ;
     gap: 1rem;
 }
 
-@media (max-width:300px){
-    .IntroText{
+@media (max-width: 480px) {
+    .IntroText {
         font-size: 10px;
     }
 }
@@ -186,6 +187,11 @@ font-size: 24px;
 
 .SkillIMG{
     height: 70px;
+    width: auto;
+}
+
+.projectIMG{
+    height: 120px;
     width: auto;
 }
 

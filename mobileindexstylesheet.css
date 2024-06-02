@@ -1,0 +1,93 @@
+@media (max-width: 480px) {
+
+    /* Adjust font size for IntroText */
+    .IntroText {
+        font-size: 14px;
+        width: auto;
+        height: auto;
+    }
+
+    /* Adjust font size for skillsetP */
+    .skillsetP {
+        font-size: 18px;
+    }
+
+    /* Adjust font size for SkillText */
+    .SkillText {
+        height: auto;
+        width: auto;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Adjust font size for experienceHeader */
+    .experienceHeader {
+        text-align: center;
+    }
+
+    /* Adjust font size for projectHeader */
+    .projectHeader {
+        text-align: center;
+    }
+
+    /* Adjust font size for ContactsContainer */
+    .ContactsContainer {
+        text-align: center;
+    }
+
+    /* Adjust font size for Contacts */
+    .Contacts {
+        padding-left: 0;
+    }
+
+    /* Adjust size for ContactIMG */
+    .ContactIMG {
+        height: auto;
+        width: 80%;
+    }
+
+    /* Adjust size for UNIVIMG */
+    .UNIVIMG {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Adjust size for table */
+    table, th, td {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    /* Adjust size for projectimg */
+    .projectimg {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Adjust size for projectimgContainer */
+    .projectimgContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Adjust size for SkillCard */
+    .SkillCard {
+        width: 90%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    /* Adjust size for projectIMG */
+    .projectIMG {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Adjust size for SkillCardButton */
+    .SkillCardButton {
+        width: 70%;
+        height: 15%;
+        font-size: 14px;
+    }
+
+}
