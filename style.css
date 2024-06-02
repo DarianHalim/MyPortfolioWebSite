@@ -190,14 +190,17 @@ font-size: 24px;
 }
 
 .SkillCardButton{
-    width: 250px;
-    height: 50px;
+    width: 40%;
+    height: 20%;
     text-align: center;
     border-radius: 1.5rem;
+    font-weight: bold;
+    background-color: #5221E6;
+    color:aliceblue ;
 }
 
 .SkillCardButton:hover{
-   color:aliceblue ;
+    color: #5221E6;;
    background-color: #5221E6;
 }
 
