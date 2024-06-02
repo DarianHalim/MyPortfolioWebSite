@@ -67,7 +67,10 @@ strong{
 .contentRow {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0rem;
     justify-content: center;
+    align-items: center;
 }
 
 .UnivBanner {
@@ -75,10 +78,18 @@ strong{
 
 }
 
+.CVIMG{
+    height: 40rem;
+    width: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
 .UNIVIMG {
     height: 40rem;
     width: auto;
     border-radius: 0.5rem;
+    object-fit: cover;
 }
 
 .bannerHeader{
