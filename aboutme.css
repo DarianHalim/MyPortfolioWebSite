@@ -96,3 +96,12 @@ strong{
     color: white;
     background-color:  #5221E6;
 }
+
+.smallProfileContainer{
+    height: 10%;
+}
+
+.smallProfile{
+    height: 10%;
+    width: 10%;
+}

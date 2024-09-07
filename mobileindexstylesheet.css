@@ -5,24 +5,26 @@
         font-size: 14px;
         width: auto;
         height: auto;
+        padding: 10px;
     }
 
+    /* MyPic styling for responsiveness */
     .MyPic{
         background-color: #5221E6;
-        height: 300px;
-        width: 100px;
-        margin-right: 20px;
+        height: 200px; /* Reduce height for better fit on small screens */
+        width: 100%;
+        margin-right: 0;
         object-fit: cover;
-        border-radius: 1rem ;
+        border-radius: 1rem;
     }
-    
 
     /* Adjust font size for skillsetP */
     .skillsetP {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 5px;
     }
 
-    /* Adjust font size for SkillText */
+    /* Adjust size and alignment for SkillText */
     .SkillText {
         height: auto;
         width: auto;
@@ -30,83 +32,73 @@
         text-align: center;
     }
 
+    /* Hide or remove topButton */
     .topButton {
-        opacity: 0%;
+        opacity: 0;
+        display: none; /* Ensure button is hidden */
     }
 
-    /* Adjust font size for experienceHeader */
+    /* Center experienceHeader */
     .experienceHeader {
         text-align: center;
+        font-size: 20px; /* Slightly adjust the size */
     }
 
-    /* Adjust font size for projectHeader */
+    /* Center projectHeader */
     .projectHeader {
+        text-align: center;
+        font-size: 20px; /* Ensure consistency */
+    }
+
+    /* Adjust ContactsContainer for responsiveness */
+    .ContactsContainer {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align content */
+        background-size: contain; /* Prevent cropping */
+    }
+
+    /* Remove padding from Contacts */
+    .Contacts {
+        padding-left: 0;
         text-align: center;
     }
 
-    /* Adjust font size for ContactsContainer */
-    .ContactsContainer {
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    /* Adjust font size for Contacts */
-    .Contacts {
-        padding-left: 0;
-    }
-
-    /* Adjust size for ContactIMG */
+    /* Adjust ContactIMG for smaller screens */
     .ContactIMG {
         height: auto;
-        width: 80%;
+        width: 60%; /* Reduce size */
+        margin: 0 auto;
     }
 
     /* Adjust size for UNIVIMG */
     .UNIVIMG {
-        width: 80%;
+        width: 70%;
         height: auto;
     }
 
-    /* Adjust size for table */
-    table,
-    th,
-    td {
-        width: 90%;
+    /* Adjust size for table elements */
+    table, th, td {
+        width: 100%;
         font-size: 12px;
+        padding: 5px;
     }
 
-    /* Adjust size for projectimg */
-    .projectimg {
+    /* Ensure project images are responsive */
+    .projectimg, .projectimgContainer, .projectIMG {
         height: auto;
         width: 100%;
     }
 
-    /* Adjust size for projectimgContainer */
-    .projectimgContainer {
-        height: auto;
-        width: 100%;
-    }
-
-    /* Adjust size for SkillCard */
+    /* Adjust SkillCard size */
     .SkillCard {
         width: 90%;
-        margin-left: 0;
-        margin-bottom: 2rem;
-    }
-
-    /* Adjust size for projectIMG */
-    .projectIMG {
-        height: auto;
-        width: 100%;
+        margin: 0 auto 2rem;
     }
 
     /* Adjust size for SkillCardButton */
     .SkillCardButton {
-        width: 70%;
-        height: 15%;
+        width: 80%;
+        height: auto;
         font-size: 14px;
     }
 

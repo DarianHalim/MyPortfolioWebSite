@@ -287,7 +287,8 @@ html{
 }
 
 .table{
-    text-align: center;
+    text-align: left;
+    align-self: center;
 }
 
 .Projects{
