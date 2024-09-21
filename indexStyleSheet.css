@@ -1,62 +1,110 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 body {
     padding: 0;
     margin: 0;
+    background-color: mintcream;
+
 }
 
-.container {
-    padding: 0;
-    margin: 0;
-
-
+em {
+    color: mediumspringgreen;
 }
 
 .navBarContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: end;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
 }
 
-.introCard {
+.navbarPositions {}
+
+.navbarText {
+    margin: 1rem;
+}
+
+.navbarText:hover {
+    color: mediumspringgreen;
+}
+
+.leftContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    width: 100%;
-}
-
-.introTextContainer {
-    text-align: left;
-}
-
-.contactMeText {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.contactImgs {
-    height: 1.2rem;
-    width: 1.2rem;
-    margin-right: 1px;
-
-}
-
-.contactsContainer {
+.introImgContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 25%;
+    height: auto;
+
+
+}
+
+.introImg {
     width: 100%;
+    height: 50%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.rightContainer {
+    width: 20%;
+    height: auto;
 
 }
 
-.profileImgContainer{
+.skillContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.skillImgContainer {
+    background-color: mediumaquamarine;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.skillImg {
+    height: 5rem;
+    width: 5rem;
+    object-fit: scale-down;
+    margin: 0.5rem;
+}
+
+
+
+.workExperienceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: mediumaquamarine;
+    padding: 1rem;
 
 }
 
-.introImg{
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    
+.workExperienceCpntainer {
+    border-radius: 0.5rem;
+    background-color: white;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.experiencesContainer {
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    text-align: center;
 }
