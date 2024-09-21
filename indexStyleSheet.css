@@ -21,9 +21,13 @@ em {
     text-align: center;
     font-weight: bold;
     align-items: center;
+    position: fixed;
+    right: 0;
 }
 
-.navbarPositions {}
+.navbarPositions {
+    
+}
 
 .navbarText {
     margin: 1rem;
@@ -33,11 +37,13 @@ em {
     color: mediumspringgreen;
 }
 
+
 .leftContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     text-align: center;
+
 }
 
 .introImgContainer {
@@ -46,9 +52,17 @@ em {
     justify-content: center;
     width: 25%;
     height: auto;
-
-
 }
+
+@media only screen and (max-width: 600px) {
+    .introImgContainer {
+
+        width: 100%;
+
+    }
+  }
+  
+
 
 .introImg {
     width: 100%;
@@ -63,11 +77,16 @@ em {
 
 }
 
+.MySkillContainer{
+  
+}
+
 .skillContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
+  
 }
 
 
