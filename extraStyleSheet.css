@@ -365,15 +365,39 @@
     text-align: center;
   }
 
-  a{
+  .headerLinks{
     text-decoration: none;
-    color: mediumspringgreen;
+    color: black;
   }
 
   a:hover{
     color: black;
   }
 
+  .headerLinks:hover{
+    color: white;
+  }
+
+
+  .contactLinks{
+    color: mediumspringgreen;
+    text-decoration: none;
+  }
+
+  .contactLinks:hover{
+    color: black
+  }
+
+
 .cardHeader{
   padding: 5rem;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  color: black;
+  text-decoration: none;
 }
