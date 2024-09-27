@@ -216,14 +216,17 @@ border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
     text-align: right;
+ 
 
 }
 
 .projectList{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 3rem;
+    justify-content: center;
 }
 
 
