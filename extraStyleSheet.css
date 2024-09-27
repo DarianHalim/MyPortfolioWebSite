@@ -5,6 +5,7 @@
     width: 190px;
     height: 254px;
     transition: 200ms;
+    margin-bottom: 5rem;
   }
   
   .container:active {
@@ -22,6 +23,7 @@
     border-radius: 20px;
     transition: 700ms;
     background: white;
+    
   }
   
   .subtitle {
@@ -37,7 +39,8 @@
     transition-timing-function: ease-in-out-out;
     transition-delay: 100ms;
     position: absolute;
-    font-size: x-large;
+    font-size: large;
+    text-align: center;
     font-weight: bold;
     color: white;
   }
@@ -357,3 +360,20 @@
     height: 14rem;
     object-fit: cover;
   }
+
+  .projectSectionHeader{
+    text-align: center;
+  }
+
+  a{
+    text-decoration: none;
+    color: mediumspringgreen;
+  }
+
+  a:hover{
+    color: black;
+  }
+
+.cardHeader{
+  padding: 5rem;
+}
