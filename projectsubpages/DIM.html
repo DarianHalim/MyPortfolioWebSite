@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deluna Project Detail</title>
+    <link rel="stylesheet" href="./projectsubpageStylesheet.css">
+</head>
+
+<body class="dimBody">
+    <div class="container">
+
+        <div class="subHeader">
+            <h1>Database Design Equipped With ERD, Logical and Physical DB Design, SQL Queries, and More</h1>
+            <h2>My Main Role Was Co-Lead, Designing The Logical and Conceptual ERD, Alongside Writing The SQL Queries,
+                and UX Design</h2>
+            <h3><a class="backHome" href="../index.html">Back To Home</a></h3>
+        </div>
+
+        <div class="cardContainer">
+
+            <div class="customCard">
+                <h1>Physical ERD</h1>
+                <img class="customCardImg" src="./projectsubpageassets/Dim1stIMG.jpg" alt="">
+            </div>
+
+            <div class="customCard">
+                <h1>Conceptual ERD</h1>
+                <img class="customCardImg" src="./projectsubpageassets/dimrelationshiptype.jpg" alt="">
+            </div>
+
+            <div class="customCard">
+                <h1>Conceptual ERD</h1>
+                <img class="customCardImg" src="./projectsubpageassets/dimconceptual.jpg" alt="">
+            </div>
+
+
+            <div class="customCard">
+                <h1>Logical ERD</h1>
+                <img class="customCardImg" src="./projectsubpageassets/dimconceptual.jpg" alt="">
+            </div>
+
+            <div class="customCard">
+                <h1>SQL Queries</h1>
+                <pre class="sqlQueries">
+CREATE DATABASE DIM
+CREATE TABLE Branch(
+BranchID CHAR(6) PRIMARY KEY CHECK(BranchID LIKE
+'BI[0-9][0-9][0-9][0-9]') NOT NULL,
+BranchLoc VARCHAR(25) NOT NULL,
+BranchName VARCHAR(25) NOT NULL
+);
+
+CREATE TABLE Staff(
+StaffID CHAR(6) PRIMARY KEY CHECK(StaffID LIKE 'SI[0-9][0-9][0-9][0-9]')
+NOT NULL,
+
+StaffName VARCHAR(40) NOT NULL,
+Position VARCHAR(40) NOT NULL,
+phoneNumb VARCHAR(40) CHECK( phoneNumb LIKE '+62%') NOT NULL,
+StaffSalary FLOAT NOT NULL,
+BranchID CHAR(6) FOREIGN KEY REFERENCES Branch(BranchID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL
+);
+
+CREATE TABLE Product(
+ProductID CHAR(6) PRIMARY KEY CHECK(ProductID LIKE
+'PI[0-9][0-9][0-9][0-9]') NOT NULL,
+ProductName VARCHAR(40) NOT NULL,
+Product Category VARCHAR(40) NOT NULL,
+ProductPrice FLOAT NOT NULL,
+ProductQuantity INTEGER CHECK(ProductQuantity >= 0) NOT NULL
+);
+CREATE TABLE Supplier(
+SupplierID CHAR(6) PRIMARY KEY CHECK(SupplierID LIKE
+'SI[0-9][0-9][0-9][0-9]') NOT NULL,
+SupplierName VARCHAR(40) NOT NULL,
+SupplierAddress VARCHAR(25) NOT NULL,
+SupplierPhone VARCHAR(15) CHECK( SupplierPhone LIKE '%+62') NOT NULL,
+);
+CREATE TABLE Warehouse(
+WarehouseID CHAR(6) PRIMARY KEY CHECK(WarehouseID LIKE
+'WI[0-9][0-9][0-9][0-9]') NOT NULL,
+WarehouseLoc VARCHAR(25) NOT NULL,
+WarehouseCapacity INTEGER CHECK(WarehouseCapacity >= 0) NOT NULL,
+Status VARCHAR(25) NOT NULL
+);
+CREATE TABLE Shipment(
+ShipmentID CHAR(6) PRIMARY KEY CHECK(ShipmentID LIKE
+'HI[0-9][0-9][0-9][0-9]') NOT NULL,
+ShipmentType VARCHAR(6) CHECK (ShipmentType IN ('Air', 'Land', 'Sea')) NOT
+NULL,
+ShipmentAmount INTEGER CHECK(ShipmentAmount >= 0) NOT NULL,
+
+ShipmentDate DATE NOT NULL,
+WarehouseID CHAR(6) FOREIGN KEY REFERENCES
+Warehouse(WarehouseID) ON UPDATE CASCADE ON DELETE CASCADE NOT
+NULL
+);
+CREATE TABLE Land(
+TruckID CHAR(6) CHECK(TruckID LIKE 'TI[0-9][0-9][0-9][0-9]') NOT NULL,
+ShipmentID CHAR(6) FOREIGN KEY REFERENCES Shipment(ShipmentID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL
+);
+CREATE TABLE Air(
+PlaneID CHAR(6) CHECK(PlaneID LIKE 'TI[0-9][0-9][0-9][0-9]') NOT NULL,
+ShipmentID CHAR(6) FOREIGN KEY REFERENCES Shipment(ShipmentID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL
+);
+CREATE TABLE Sea(
+BoatID CHAR(6) CHECK(BoatID LIKE 'TI[0-9][0-9][0-9][0-9]') NOT NULL,
+ShipmentID CHAR(6) FOREIGN KEY REFERENCES Shipment(ShipmentID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL
+);
+
+CREATE TABLE Purchase(
+PurchaseID CHAR(6) PRIMARY KEY CHECK(PurchaseID LIKE
+'BI[0-9][0-9][0-9][0-9]') NOT NULL,
+PurchaseDate DATE NOT NULL,
+PurchaseDetail VARCHAR(200) NOT NULL,
+SupplierID CHAR(6) FOREIGN KEY REFERENCES Supplier(SupplierID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+StaffID CHAR(6) FOREIGN KEY REFERENCES Staff(StaffID) ON UPDATE
+CASCADE ON DELETE CASCADE NOT NULL
+);
+CREATE TABLE PurchaseDetails(
+PurchaseID CHAR(6) FOREIGN KEY REFERENCES Purchase(PurchaseID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+
+ProductID CHAR(6) FOREIGN KEY REFERENCES Product(ProductID) ON
+UPDATE CASCADE ON DELETE CASCADE NOT NULL,
+Amount INTEGER CHECK(Amount >= 0) NOT NULL
+);
+                </pre>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
