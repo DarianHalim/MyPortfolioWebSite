@@ -151,6 +151,7 @@ em {
         width: 70%;
         text-align: center;
 
+        
     }
 
     .helloText{
@@ -239,9 +240,8 @@ em {
     }
 
     .aboutMeText {
-        width: 25%;
+        width: 30%;
         text-align: center;
-       margin-left: 20rem;
     }
 }
 
